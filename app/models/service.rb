@@ -1,4 +1,4 @@
-class Product < Item
+class Service < Item
   def taxable?
     false
   end
