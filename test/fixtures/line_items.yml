@@ -1,11 +1,39 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+due_one:
   quantity: 1
   item: one
-  bill: one
+  bill: due
 
-two:
-  quantity: 1
+due_three:
+  quantity: 2
+  item: three
+  bill: due
+
+currently_overdue_two:
+  quantity: 3
   item: two
-  bill: two
+  bill: currently_overdue
+
+currently_overdue_four:
+  quantity: 4
+  item: four
+  bill: currently_overdue
+
+paid_overdue_one:
+  quantity: 1
+  item: one
+  bill: paid_overdue
+
+paid_overdue_three:
+  quantity: 2
+  item: three
+  bill: paid_overdue
+
+paid_ontime_two:
+  quantity: 3
+  item: two
+  bill: paid_ontime
+
+paid_ontime_four:
+  quantity: 4
+  item: four
+  bill: paid_ontime

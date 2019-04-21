@@ -1,0 +1,9 @@
+one:
+  name: Product1
+  type: Product
+  price: 11.99
+
+two:
+  name: Product2
+  type: Product
+  price: 22.99

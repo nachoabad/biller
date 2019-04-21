@@ -1,11 +1,19 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  due_date: 2019-04-21
-  paid_date: 2019-04-21
+due:
+  due_date: <%= Date.tomorrow %>
+  paid_date:
   client: one
 
-two:
-  due_date: 2019-04-21
-  paid_date: 2019-04-21
+currently_overdue:
+  due_date: <%= Date.yesterday %>
+  paid_date:
+  client: one
+
+paid_overdue:
+  due_date: <%= Date.yesterday %>
+  paid_date: <%= Date.today %>
+  client: two
+
+paid_ontime:
+  due_date: <%= Date.yesterday %>
+  paid_date: <%= Date.yesterday %>
   client: two
