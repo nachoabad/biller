@@ -10,6 +10,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
+    @line_items = @bill.line_items
   end
 
   # GET /bills/new

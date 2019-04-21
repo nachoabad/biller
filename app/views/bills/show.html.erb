@@ -1,19 +1,54 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <strong>Client:</strong>
+  <%= @bill.client.name %>
+</p>
 <p>
   <strong>Due date:</strong>
   <%= @bill.due_date %>
 </p>
-
 <p>
   <strong>Paid date:</strong>
-  <%= @bill.paid_date %>
+  <%= @bill.paid_date || 'Payment pending' %>
 </p>
 
-<p>
-  <strong>Client:</strong>
-  <%= @bill.client %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Item</th>
+      <th>Type</th>
+      <th>Unit Price</th>
+      <th>Sub Total</th>
+      <th>Tax</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_items.each do |line_item| %>
+      <tr>
+        <td><%= line_item.quantity %></td>
+        <td><%= line_item.name %></td>
+        <td><%= line_item.type %></td>
+        <td><%= line_item.price %></td>
+        <td><%= line_item.sub_total %></td>
+        <td><%= line_item.tax %></td>
+        <td><%= line_item.total %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="5"></td>
+      <td>Additional Charges</td>
+      <td><%= @bill.additional_charges %></td>
+    </tr>
+    <tr>
+      <td colspan="5"></td>
+      <td>Total</td>
+      <td><%= @bill.total %></td>
+    </tr>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
 <%= link_to 'Back', bills_path %>
