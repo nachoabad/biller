@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  due_date: 2019-04-21
+  paid_date: 2019-04-21
+  client: one
+
+two:
+  due_date: 2019-04-21
+  paid_date: 2019-04-21
+  client: two
