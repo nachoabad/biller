@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BillsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @bill = bills(:one)
+    @bill = bills(:due)
   end
 
   test "should get index" do
