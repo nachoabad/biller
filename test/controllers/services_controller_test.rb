@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ServicesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @service = services(:one)
+    @service = services(:three)
   end
 
   test "should get index" do
